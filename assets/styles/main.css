@@ -241,6 +241,7 @@ header.scrolled .top_menu_wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 10px;
 }
 .catalog_card {
   padding: 20px 20px 0px;
@@ -282,6 +283,10 @@ header.scrolled .top_menu_wrapper {
 .catalog_card_content {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .catalog_card_top {
   background-color: #dddddd;
@@ -358,7 +363,7 @@ header.scrolled .top_menu_wrapper {
   align-items: center;
   justify-content: space-between;
   font-size: 26px;
-  font-weight: 900;
+  font-weight: 500;
   border-bottom: 1px solid #fff3;
   padding: 10px 35px;
   cursor: pointer;
@@ -420,56 +425,19 @@ header.scrolled .top_menu_wrapper {
 }
 
 
-.product_link {
- padding: 15px 25px;
- border-radius: 16px;
- color: #212121;
- z-index: 1;
- background: #e8e8e8;
- position: relative;
- font-weight: 1000;
- font-size: 17px;
- -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
- box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
- transition: all 250ms ease-in-out;
- overflow: hidden;
- border: none;
- text-align: center;
-}
-
-.product_link::before {
- content: "";
- position: absolute;
- top: 0;
- left: 0;
- height: 100%;
- width: 0;
- background-color: #61569D;
- z-index: -1;
- -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
- box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
- transition: all 250ms ease-in-out;
- border: none;
-}
-
-.product_link:hover {
- color: #e8e8e8;
-}
-
-.product_link:hover::before {
- width: 100%;
-}
-.productSwiper .swiper-pagination-bullet {
+.productSwiper .swiper-pagination-bullet,
+.newSwiper .custom-swiper-pagination .swiper-pagination-bullet {
   background-color: #fff5;
   width: 15px;
   height: 15px;
-  outline: 0px solid #61569D;
+  outline: 0px solid #61569d;
   transition: all 0.3s ease-in-out;
   outline-offset: 0px;
 }
-.productSwiper .swiper-pagination-bullet-active {
-  background-color: #61569D;
-  outline: 2px solid #61569D;
+.productSwiper .swiper-pagination-bullet-active,
+.newSwiper .custom-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #61569d;
+  outline: 2px solid #61569d;
   outline-offset: 5px;
 }
 

@@ -35,8 +35,37 @@ new Swiper(".productSwiper", {
       spaceBetween: 20,
     },
     1024: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+});
+
+new Swiper(".newSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  speed: 1200,
+  pagination: {
+    el: ".custom-swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
       slidesPerView: 2,
       spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
     },
   },
 });
