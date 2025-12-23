@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#131217]">
+    <header>
+      <div class="top_menu_wrapper">
+        <nav class="flex items-center justify-between text-white text-[17px]">
+          <a href="/">
+            <img width="150" src="/assets/photos/logo.png" alt="logo" />
+          </a>
+          <ul class="text-white flex items-center gap-14 ml-24">
+            <li class="bg-white text-black px-2 py-1 rounded-[32px]"><a href="">Продукция</a></li>
+            <li class="dropdown relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+              <button class="flex items-center gap-2">
+                Услуги
+                <div class="dropIcon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="15"
+                    height="15"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 128 128"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z"
+                        fill="#000"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </button>
+              <div
+                x-show="open"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 translate-y-1"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-1"
+                class="absolute left-[-50px] mt-44 z-10 w-44 rounded-md bg-white shadow-lg"
+              >
+                <ul class="py-1 text-sm text-gray-700">
+                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Lorem</a></li>
+                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Lorem</a></li>
+                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Lorem</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="">Прайс-лист</a></li>
+            <li class="bg-white text-black px-2 py-1 rounded-[32px]"><a href="">Еще</a></li>
+          </ul>
+          <div class="flex items-center gap-3">
+            <li class="bg-white text-black py-2 px-4 rounded-[32px]"><a href="">Обратная связь</a></li>
+            <li class="bg-white w-[40px] h-[40px] rounded-[50%] flex items-center justify-center">
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20"
+                  height="20"
+                  x="0"
+                  y="0"
+                  viewBox="0 0 24 24"
+                  style="enable-background: new 0 0 512 512"
+                  xml:space="preserve"
+                  class=""
+                >
+                  <g>
+                    <path
+                      d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L23.93 3.821l.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693L18.953 5.78c.595-.394 1.136-.176.691.218z"
+                      fill="#ff6d0b"
+                      opacity="1"
+                      data-original="#000000"
+                      class=""
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- banner slider -->
+      <section>
+        <div class="container">
+          <div class="swiper bannerSwiper h-[665px] mt-28 relative">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide_photo" data-swiper-parallax="-3000">
+                  <img src="/assets/photos/slidephoto.png" alt="banner1" />
+                </div>
+                <div class="slide_content">
+                  <p class="text-4xl slider_title" data-swiper-parallax="-1000">Lorem ipsum dolor sit</p>
+                  <p class="slider_desc" data-swiper-parallax="-1500">lorem ipsum</p>
+                  <p class="slider_pr_name" data-swiper-parallax="-2000">Product name</p>
+                  <a href="/" data-swiper-parallax="-2500">Узнать больше</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide_photo" data-swiper-parallax="-3000">
+                  <img src="/assets/photos/slidephoto.png" alt="banner1" />
+                </div>
+                <div class="slide_content">
+                  <p class="text-4xl slider_title" data-swiper-parallax="-1000">Lorem ipsum dolor sit</p>
+                  <p class="slider_desc" data-swiper-parallax="-1500">lorem ipsum</p>
+                  <p class="slider_pr_name" data-swiper-parallax="-2000">Product name</p>
+                  <a href="/" data-swiper-parallax="-2500">Узнать больше</a>
+                </div>
+              </div>
+            </div>
+            <div class="custom-swiper-button-next animated-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="24"
+                height="24"
+                x="0"
+                y="0"
+                viewBox="0 0 128 128"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve"
+                class="arr-2"
+              >
+                <g>
+                  <path
+                    d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z"
+                    fill="#fff"
+                    opacity="1"
+                    data-original="#fff"
+                    class=""
+                  ></path>
+                </g>
+              </svg>
+              <span class="circle"></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="24"
+                height="24"
+                x="0"
+                y="0"
+                viewBox="0 0 128 128"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve"
+                class="arr-1"
+              >
+                <g>
+                  <path
+                    d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z"
+                    fill="#fff"
+                    opacity="1"
+                    data-original="#fff"
+                    class=""
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="custom-swiper-button-prev animated-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="24"
+                height="24"
+                x="0"
+                y="0"
+                viewBox="0 0 128 128"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve"
+                class="arr-2"
+              >
+                <g>
+                  <path
+                    d="M84,108a3.988,3.988,0,0,1-2.828-1.172l-40-40a3.997,3.997,0,0,1,0-5.656l40-40c1.563-1.563,4.094-1.563,5.656,0s1.563,4.094,0,5.656L49.656,64l37.172,37.172a3.997,3.997,0,0,1,0,5.656A3.988,3.988,0 0 1 84 108z"
+                    fill="#ffffff"
+                  ></path>
+                </g>
+              </svg>
+              <span class="circle"></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="24"
+                height="24"
+                x="0"
+                y="0"
+                viewBox="0 0 128 128"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve"
+                class="arr-1"
+              >
+                <g>
+                  <path
+                    d="M84,108a3.988,3.988,0,0,1-2.828-1.172l-40-40a3.997,3.997,0,0,1,0-5.656l40-40c1.563-1.563,4.094-1.563,5.656,0s1.563,4.094,0,5.656L49.656,64l37.172,37.172a3.997,3.997,0,0,1,0,5.656A3.988,3.988,0 0 1 84 108z"
+                    fill="#ffffff"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- catalog -->
+      <section>
+        <div class="container">
+          <div id="catalog_wrapper" class="mt-24">
+            <a href="/" class="catalog_card">
+              <div class="catalog_card_content">
+                <div class="flex items-center justify-between">
+                  <div class="catalog_card_top">
+                    <img src="/assets/photos/smartphone.webp" alt="" />
+                    <span>Смартфоны</span>
+                  </div>
+                  <div class="catalog_card_plus_icon w-[30px] h-[30px] bg-white rounded-[50%] flex items-center justify-center text-[#EBEBEB] text-2xl font-bold">+</div>
+                </div>
+                <div class="catalog_card_photo">
+                  <img src="/assets/photos/phone.png" alt="" />
+                </div>
+              </div>
+            </a>
+            <a href="/" class="catalog_card">
+              <div class="catalog_card_content">
+                <div class="flex items-center justify-between">
+                  <div class="catalog_card_top">
+                    <img src="/assets/photos/planset.webp" alt="" />
+                    <span>Планшеты</span>
+                  </div>
+                  <div class="catalog_card_plus_icon w-[30px] h-[30px] bg-white rounded-[50%] flex items-center justify-center text-[#EBEBEB] text-3xl font-bold">+</div>
+                </div>
+                <div class="catalog_card_photo">
+                  <img src="/assets/photos/planset.png" alt="" />
+                </div>
+              </div>
+            </a>
+            <a href="/" class="catalog_card">
+              <div class="catalog_card_content">
+                <div class="flex items-center justify-between">
+                  <div class="catalog_card_top">
+                    <img src="/assets/photos/computer.webp" alt="" />
+                    <span>Компьютеры</span>
+                  </div>
+                  <div class="catalog_card_plus_icon w-[30px] h-[30px] bg-white rounded-[50%] flex items-center justify-center text-[#EBEBEB] text-3xl font-bold">+</div>
+                </div>
+                <div class="catalog_card_photo">
+                  <img src="/assets/photos/computer.png" alt="" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- about us -->
+      <section>
+        <div class="bg-black text-white py-16 mt-32 rounded-[32px] relative">
+          <div class="container">
+            <div class="flex items-center justify-between border-b-[1px] border-[#3E3D44] pb-10">
+              <div class="w-[50%]">
+                <h2 class="text-7xl">О компании</h2>
+                <p class="mt-5 text-[15px] font-[100]">
+                  Мы ценим ваше время и оперативно свяжемся с вами в течение 5 минут, чтобы ответить на все ваши вопросы и обсудить детали вашего проекта
+                </p>
+              </div>
+              <button class="py-2 px-6 cursor-pointer rounded-[32px] bg-[#61569D]">Оставить заявку</button>
+            </div>
+            <div class="flex justify-between flex-wrap">
+              <div class="w-[50%] font-[100]">
+                <span class="opacity-50 italic">— о компании:</span>
+                <p class="text-[14px] mt-2">
+                  Мы — авторизованный и сертифицированный сервисный центр, который работает по официальным стандартам производителей. Наша команда инженеров регулярно проходит
+                  обучение и подтверждает квалификацию, чтобы вы могли доверить нам технику без сомнений.
+                </p>
+              </div>
+              <div class="w-[50%] font-[100]">
+                <span class="opacity-50 italic">— миссия:</span>
+                <p class="text-[14px] mt-2">
+                  Наша миссия — делать технологии доступными. Мы стремимся к тому, чтобы каждый клиент мог максимально долго пользоваться своим устройством, не тратя лишних средств
+                  на покупку нового. Благодаря оригинальным комплектующим и современному оборудованию мы продлеваем жизнь гаджетам, сохраняя их надёжность и производительность.
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between flex-wrap mt-12">
+              <div class="flex justify-between flex-wrap w-[50%]">
+                <div id="aboutLeft" class="w-[48%] sticky top-[100px] h-[340px] rounded-[32px] bg-[#0D0D0D] p-[20px] overflow-hidden border border-[#fff1]">
+                  <div class="relative z-[99]">
+                    <p class="text-[18px]">Сотрудничая с нами, вы делаете выбор в пользу качества, надежности и профессионализма</p>
+                    <div class="mt-12">
+                      <a
+                        href=""
+                        class="py-4 border border-[#fff3] text-[21px] relative flex justify-between px-6 w-full bg-[#fff5] duration-300 ease-in-out rounded-[32px] social_link_about"
+                      >
+                        <span> Telegram </span>
+                        <div class="duration-300 ease-in-out w-[60px] absolute right-0 top-0 h-full rounded-[50%] border-[1px] border-[#fff3] flex items-center justify-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="25"
+                            height="25"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 24 24"
+                            style="enable-background: new 0 0 512 512"
+                            xml:space="preserve"
+                            class=""
+                          >
+                            <g>
+                              <path
+                                d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L23.93 3.821l.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693L18.953 5.78c.595-.394 1.136-.176.691.218z"
+                                fill="#ffffff"
+                                opacity="1"
+                                data-original="#000000"
+                                class=""
+                              ></path>
+                            </g>
+                          </svg>
+                        </div>
+                      </a>
+                      <a href="" class="py-4 mt-2 border border-[#fff3] text-[21px] relative flex justify-between px-6 w-full bg-[#fff5] rounded-[32px] social_link_about">
+                        <span> WhatsApp </span>
+                        <div class="duration-300 ease-in-out w-[60px] absolute right-0 top-0 h-full rounded-[50%] border-[1px] border-[#fff3] flex items-center justify-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="25"
+                            height="25"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 512 512"
+                            style="enable-background: new 0 0 512 512"
+                            xml:space="preserve"
+                            class=""
+                          >
+                            <g>
+                              <path
+                                d="M256.064 0h-.128C114.784 0 0 114.816 0 256c0 56 18.048 107.904 48.736 150.048l-31.904 95.104 98.4-31.456C155.712 496.512 204 512 256.064 512 397.216 512 512 397.152 512 256S397.216 0 256.064 0zm148.96 361.504c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.616-127.456-112.576-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016.16 8.576.288 7.52.32 11.296.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744-3.776 4.352-7.36 7.68-11.136 12.352-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z"
+                                fill="#ffffff"
+                                opacity="1"
+                                data-original="#000000"
+                                class=""
+                              ></path>
+                            </g>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-[48%] flex flex-col gap-3">
+                  <div>
+                    <div class="rounded-[32px] border border-[#fff1] p-[20px] bg-[#0D0D0D]">
+                      <div class="bg-[#191919] rounded-[50%] w-[50px] h-[50px] flex items-center justify-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="25"
+                          height="25"
+                          x="0"
+                          y="0"
+                          viewBox="0 0 511.478 511.478"
+                          style="enable-background: new 0 0 512 512"
+                          xml:space="preserve"
+                          class=""
+                        >
+                          <g>
+                            <path
+                              d="M191.935 0v42.667h42.667V64c14.933-2.133 27.733-2.133 42.667 0V42.667h42.667V0H191.935z"
+                              fill="#ffffff"
+                              opacity="1"
+                              data-original="#000000"
+                              class=""
+                            ></path>
+                            <path
+                              d="m401.002 140.8 14.933-14.933 17.067 17.067 29.867-29.867-64-64-29.867 29.867L386.069 96l-19.2 19.2c-102.4-61.867-234.667-29.867-294.4 72.533S44.735 418.133 145.002 480s232.533 29.867 292.267-72.533c53.333-87.467 38.4-198.4-36.267-266.667zM255.935 445.867c-83.2 0-149.333-66.133-149.333-149.333S172.735 147.2 255.935 147.2v149.333h149.333c.001 83.2-66.133 149.334-149.333 149.334z"
+                              fill="#ffffff"
+                              opacity="1"
+                              data-original="#000000"
+                              class=""
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <p class="text-[22px] font-[500] mt-24">Быстрый сервис</p>
+                      <p class="text-[14px] font-[100] mt-2">
+                        – Мы понимаем, насколько важно вам вернуть ваше устройство в рабочее состояние, поэтому большинство работ выполняется в максимально короткие сроки.
+                      </p>
+                    </div>
+                    <div></div>
+                  </div>
+                  <div>
+                    <div class="rounded-[32px] border border-[#fff1] p-[20px] bg-[#0D0D0D]">
+                      <div class="bg-[#191919] rounded-[50%] w-[50px] h-[50px] flex items-center justify-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="25"
+                          height="25"
+                          x="0"
+                          y="0"
+                          viewBox="0 0 32 32"
+                          style="enable-background: new 0 0 512 512"
+                          xml:space="preserve"
+                          class=""
+                        >
+                          <g>
+                            <path
+                              d="m30.87 26-3.13-5.41a14 14 0 0 1-7.15 5.62l2.48 4.29a1 1 0 0 0 .87.5 1 1 0 0 0 .86-.5l1.74-3H30a1 1 0 0 0 .87-.5 1 1 0 0 0 0-1zM4.26 20.59 1.13 26a1 1 0 0 0 0 1 1 1 0 0 0 .87.5h3.46l1.74 3a1 1 0 0 0 .86.5 1 1 0 0 0 .87-.5l2.48-4.29a14 14 0 0 1-7.15-5.62zM17 10.48l-1-2-1 2a1 1 0 0 1-.75.54l-2.15.32 1.56 1.54a1 1 0 0 1 .29.88l-.37 2.16 1.91-1a1.06 1.06 0 0 1 .94 0l1.91 1-.34-2.16a1 1 0 0 1 .29-.88l1.56-1.54-2.14-.34a1 1 0 0 1-.71-.52z"
+                              fill="#ffffff"
+                              opacity="1"
+                              data-original="#000000"
+                              class=""
+                            ></path>
+                            <path
+                              d="M28 13a12 12 0 1 0-12 12 12 12 0 0 0 12-12zm-5.3-1.64-2.63 2.58.62 3.64a1 1 0 0 1-.4 1 1 1 0 0 1-.58.19 1 1 0 0 1-.47-.12L16 16.92l-3.24 1.71a1 1 0 0 1-1-.07 1 1 0 0 1-.4-1l.62-3.64-2.68-2.56a1 1 0 0 1 .55-1.71l3.63-.53 1.62-3.31a1 1 0 0 1 1.8 0l1.62 3.31 3.63.53a1 1 0 0 1 .55 1.71z"
+                              fill="#ffffff"
+                              opacity="1"
+                              data-original="#000000"
+                              class=""
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <p class="text-[22px] font-[500] mt-24">Гарантия на услуги</p>
+                      <p class="text-[14px] font-[100] mt-2">– Мы уверены в качестве наших услуг, поэтому на все выполненные работы предоставляется гарантия.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+              <div id="aboutRight" class="w-[49%] sticky top-[100px] border border-[#fff1] rounded-[32px] h-[550px] overflow-hidden flex flex-col justify-end">
+                <div class="py-6 about_services_list">
+                  <ul class="flex gap-[30px] text-nowrap about_services_list_wrapper text-[18px] uppercase font-[500] list-disc w-[100000px]">
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                    <li>консультация специалиста</li>
+                  </ul>
+                </div>
+                <form class="bg-[#0D0D0D] w-full flex gap-4 py-5 px-8">
+                  <input type="tel" name="phone_about" placeholder="Telefon" class="py-4 w-[50%] px-8 bg-[#191919] rounded-[60px] text-[20px] font-[100]" />
+                  <div class="flex flex-col">
+                    <button type="submit" class="cursor-pointer text-white w-fit py-2 px-8 text-[16px] bg-[#61569D] rounded-[32px]">Отправить заявку</button>
+                    <label for="accept_rule" class="cursor-pointer text-[13px] mt-2 flex items-center gap-2 text-[#c2c2c2]">
+                      <input name="accept_rule" id="accept_rule" type="checkbox" />
+                      <span>Я ознакомлен(а) с пользовательским соглашением*</span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mt-24">
+          <h2 class="uppercase text-center text-7xl font-[600] text-white">продукции</h2>
+          <div class="swiper productSwiper mt-16">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide rounded-[8px] overflow-hidden">
+                <div class="flex justify-between">
+                  <div class="w-[50%] flex items-center justify-center bg-[#0D0D0D] p-8">
+                    <img class="w-[70%] h-full object-contain" src="/assets/photos/raptor.png" alt="" />
+                  </div>
+                  <div class="w-[50%] flex flex-col justify-center bg-[#1F1E23] py-8 px-4">
+                    <p class="text-[32px] font-[600] text-white">RAPTOR 800W</p>
+                    <p class="text-[16px] font-[100] text-white mt-4 line-clamp-4">
+                      Источник бесперебойного питания Raptor 800W предназначен для защиты компьютерной и бытовой техники от перебоев и отключений электропитания. UPS обеспечивает
+                    </p>
+                    <a href="/" class="product_link mt-6"> Узнать больше </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide rounded-[8px] overflow-hidden">
+                <div class="flex justify-between">
+                  <div class="w-[50%] flex items-center justify-center bg-[#0D0D0D] p-8">
+                    <img class="w-[70%] h-full object-contain" src="/assets/photos/raptor.png" alt="" />
+                  </div>
+                  <div class="w-[50%] flex flex-col justify-center bg-[#1F1E23] py-8 px-4">
+                    <p class="text-[32px] font-[600] text-white">RAPTOR 800W</p>
+                    <p class="text-[16px] font-[100] text-white mt-4 line-clamp-4">
+                      Источник бесперебойного питания Raptor 800W предназначен для защиты компьютерной и бытовой техники от перебоев и отключений электропитания. UPS обеспечивает
+                    </p>
+                    <a href="/" class="product_link mt-6"> Узнать больше </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide rounded-[8px] overflow-hidden">
+                <div class="flex justify-between">
+                  <div class="w-[50%] flex items-center justify-center bg-[#0D0D0D] p-8">
+                    <img class="w-[70%] h-full object-contain" src="/assets/photos/raptor.png" alt="" />
+                  </div>
+                  <div class="w-[50%] flex flex-col justify-center bg-[#1F1E23] py-8 px-4">
+                    <p class="text-[32px] font-[600] text-white">RAPTOR 800W</p>
+                    <p class="text-[16px] font-[100] text-white mt-4 line-clamp-4">
+                      Источник бесперебойного питания Raptor 800W предназначен для защиты компьютерной и бытовой техники от перебоев и отключений электропитания. UPS обеспечивает
+                    </p>
+                    <a href="/" class="product_link mt-6"> Узнать больше </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide rounded-[8px] overflow-hidden">
+                <div class="flex justify-between">
+                  <div class="w-[50%] flex items-center justify-center bg-[#0D0D0D] p-8">
+                    <img class="w-[70%] h-full object-contain" src="/assets/photos/raptor.png" alt="" />
+                  </div>
+                  <div class="w-[50%] flex flex-col justify-center bg-[#1F1E23] py-8 px-4">
+                    <p class="text-[32px] font-[600] text-white">RAPTOR 800W</p>
+                    <p class="text-[16px] font-[100] text-white mt-4 line-clamp-4">
+                      Источник бесперебойного питания Raptor 800W предназначен для защиты компьютерной и бытовой техники от перебоев и отключений электропитания. UPS обеспечивает
+                    </p>
+                    <a href="/" class="product_link mt-6"> Узнать больше </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-swiper-pagination text-center mt-4 py-2 flex gap-3 items-center justify-center"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- faq -->
+      <section>
+        <div class="container">
+          <p class="faq_title uppercase text-center mt-32 md:text-[72px] font-[900] text-white">Часто <span class="text-block-shape">задаваемые</span> вопросы</p>
+          <div id="faq_wrapper" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white mt-12">
+            <div class="faq_card">
+              <div class="faq_question">
+                <span> Вопрос 1: Как долго длится ремонт смартфона? </span>
+                <button class="bg-[#1F1E23] w-[60px] h-[50px] rounded-[8px] flex items-center justify-center faq_btn duration-300 ease-in-out">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="25"
+                    height="25"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="rotate-[45deg]"
+                  >
+                    <g>
+                      <path
+                        d="m22.707 11.293-7-7a1 1 0 0 0-1.414 1.414L19.586 11H2a1 1 0 0 0 0 2h17.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="faq_answer">Ответ: Время ремонта зависит от сложности поломки и наличия запчастей. Обычно это занимает от нескольких часов до нескольких дней.</div>
+            </div>
+            <div class="faq_card">
+              <div class="faq_question">
+                <span> Вопрос 1: Как долго длится ремонт смартфона? </span>
+                <button class="bg-[#1F1E23] w-[60px] h-[50px] rounded-[8px] flex items-center justify-center faq_btn duration-300 ease-in-out">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="25"
+                    height="25"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="rotate-[45deg]"
+                  >
+                    <g>
+                      <path
+                        d="m22.707 11.293-7-7a1 1 0 0 0-1.414 1.414L19.586 11H2a1 1 0 0 0 0 2h17.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="faq_answer">Ответ: Время ремонта зависит от сложности поломки и наличия запчастей. Обычно это занимает от нескольких часов до нескольких дней.</div>
+            </div>
+            <div class="faq_card">
+              <div class="faq_question">
+                <span> Вопрос 1: Как долго длится ремонт смартфона? </span>
+                <button class="bg-[#1F1E23] w-[60px] h-[50px] rounded-[8px] flex items-center justify-center faq_btn duration-300 ease-in-out">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="25"
+                    height="25"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="rotate-[45deg]"
+                  >
+                    <g>
+                      <path
+                        d="m22.707 11.293-7-7a1 1 0 0 0-1.414 1.414L19.586 11H2a1 1 0 0 0 0 2h17.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="faq_answer">Ответ: Время ремонта зависит от сложности поломки и наличия запчастей. Обычно это занимает от нескольких часов до нескольких дней.</div>
+            </div>
+            <div class="faq_card">
+              <div class="faq_question">
+                <span> Вопрос 1: Как долго длится ремонт смартфона? </span>
+                <button class="bg-[#1F1E23] w-[60px] h-[50px] rounded-[8px] flex items-center justify-center faq_btn duration-300 ease-in-out">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="25"
+                    height="25"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="rotate-[45deg]"
+                  >
+                    <g>
+                      <path
+                        d="m22.707 11.293-7-7a1 1 0 0 0-1.414 1.414L19.586 11H2a1 1 0 0 0 0 2h17.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="faq_answer">Ответ: Время ремонта зависит от сложности поломки и наличия запчастей. Обычно это занимает от нескольких часов до нескольких дней.</div>
+            </div>
+            <div class="faq_card">
+              <div class="faq_question">
+                <span> Вопрос 1: Как долго длится ремонт смартфона? </span>
+                <button class="bg-[#1F1E23] w-[60px] h-[50px] rounded-[8px] flex items-center justify-center faq_btn duration-300 ease-in-out">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="25"
+                    height="25"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="rotate-[45deg]"
+                  >
+                    <g>
+                      <path
+                        d="m22.707 11.293-7-7a1 1 0 0 0-1.414 1.414L19.586 11H2a1 1 0 0 0 0 2h17.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="faq_answer">Ответ: Время ремонта зависит от сложности поломки и наличия запчастей. Обычно это занимает от нескольких часов до нескольких дней.</div>
+            </div>
+            <div class="faq_card">
+              <div class="faq_question">
+                <span> Вопрос 1: Как долго длится ремонт смартфона? </span>
+                <button class="bg-[#1F1E23] w-[60px] h-[50px] rounded-[8px] flex items-center justify-center faq_btn duration-300 ease-in-out">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="25"
+                    height="25"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="rotate-[45deg]"
+                  >
+                    <g>
+                      <path
+                        d="m22.707 11.293-7-7a1 1 0 0 0-1.414 1.414L19.586 11H2a1 1 0 0 0 0 2h17.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="faq_answer">Ответ: Время ремонта зависит от сложности поломки и наличия запчастей. Обычно это занимает от нескольких часов до нескольких дней.</div>
+            </div>
+            <div class="faq_card">
+              <div class="faq_question">
+                <span> Вопрос 1: Как долго длится ремонт смартфона? </span>
+                <button class="bg-[#1F1E23] w-[60px] h-[50px] rounded-[8px] flex items-center justify-center faq_btn duration-300 ease-in-out">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="25"
+                    height="25"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="rotate-[45deg]"
+                  >
+                    <g>
+                      <path
+                        d="m22.707 11.293-7-7a1 1 0 0 0-1.414 1.414L19.586 11H2a1 1 0 0 0 0 2h17.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="faq_answer">Ответ: Время ремонта зависит от сложности поломки и наличия запчастей. Обычно это занимает от нескольких часов до нескольких дней.</div>
+            </div>
+            <div class="faq_card">
+              <div class="faq_question">
+                <span> Вопрос 1: Как долго длится ремонт смартфона? </span>
+                <button class="bg-[#1F1E23] w-[60px] h-[50px] rounded-[8px] flex items-center justify-center faq_btn duration-300 ease-in-out">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="25"
+                    height="25"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="rotate-[45deg]"
+                  >
+                    <g>
+                      <path
+                        d="m22.707 11.293-7-7a1 1 0 0 0-1.414 1.414L19.586 11H2a1 1 0 0 0 0 2h17.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="faq_answer">Ответ: Время ремонта зависит от сложности поломки и наличия запчастей. Обычно это занимает от нескольких часов до нескольких дней.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- onfooter -->
+      <section>
+        <div id="onfooterWrapper" class="py-6 relative rounded-[64px] mt-32 overflow-hidden">
+          <div class="container h-full">
+            <div class="flex flex-wrap items-center justify-between text-white h-full">
+              <div class="flex flex-col justify-between w-[40%] h-full">
+                <div>
+                  <p class="text-[44px] leading-[48px] font-[400]">Бесплатная диагностика + скидка на ремонт смартфонов</p>
+                  <p class="text-[14px] mt-4">
+                    Весь сентябрь мы предлагаем бесплатную диагностику любых смартфонов и планшетов. Если потребуется ремонт — вы получите скидку 15% на работы и комплектующие.
+                  </p>
+                </div>
+                <div>
+                  <p class="w-[80%]">Предложение действует до [дата окончания акции]. Успейте воспользоваться!</p>
+                  <a class="py-2 px-4 bg-white rounded-[32px] text-[black] mt-4 flex w-fit" href="/">Узнать подробнее</a>
+                </div>
+              </div>
+              <div class="w-[140px] h-[140px] flex items-center justify-center text-[#E36517] text-5xl bg-white rounded-[50%]">20%</div>
+              <div class="relative bottom-0 w-[40%] h-full">
+                <img class="absolute left-[50%] scale-[1.2] bottom-[0%] -translate-x-[50%] translate-y-[10%] w-full h-full object-contain" src="/assets/photos/phone3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer_wrapper mt-24 flex justify-between">
+          <div class="flex w-[20%] flex-col gap-4">
+            <ul class="flex items-center gap-4 footer_socials">
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="45"
+                    height="45"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 100 100"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        fill-rule="evenodd"
+                        d="M49.1 72.6h4.8s1.4-.2 2.2-1c.7-.7.7-2.1.7-2.1s-.1-6.4 2.9-7.4c2.9-.9 6.7 6.2 10.7 8.9 3 2.1 5.3 1.6 5.3 1.6l10.7-.1s5.6-.3 2.9-4.7c-.2-.4-1.5-3.3-7.9-9.2-6.7-6.2-5.8-5.2 2.3-16 4.9-6.5 6.9-10.5 6.3-12.3-.6-1.6-4.2-1.2-4.2-1.2l-12 .1s-.9-.1-1.6.3c-.8.5-1.2 1.4-1.2 1.4s-1.9 5.1-4.4 9.4c-5.4 9.1-7.5 9.6-8.4 9-2-1.3-1.5-5.3-1.5-8.1 0-8.8 1.3-12.5-2.6-13.4-1.3-.3-2.3-.5-5.6-.6-4.3 0-7.9 0-10 1-1.4.7-2.4 2.2-1.8 2.2.8.1 2.6.5 3.5 1.8 1.2 1.7 1.2 5.4 1.2 5.4s.7 10.4-1.7 11.7c-1.6.9-3.8-.9-8.6-9.2-2.4-4.2-4.3-8.9-4.3-8.9s-.4-.9-1-1.3c-.5-.4-1.5-.7-2.6-.7l-10.7.1s-1.7 0-2.3.8c-.6.7 0 2 0 2s9 20.9 19.1 31.4c9.3 9.8 19.8 9.1 19.8 9.1z"
+                        clip-rule="evenodd"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="35"
+                    height="35"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="M4.721 12.881c-.613 1.205.083 1.781 1.671 2.765 1.35.834 3.215 1.139 4.413 1.261l-4.721 4.541c-1.374 1.317.838 3.43 2.211 2.141l3.717-3.585c1.423 1.369 2.787 2.681 3.717 3.59 1.374 1.294 3.585-.801 2.226-2.141-.102-.097-5.037-4.831-4.736-4.541 1.213-.122 3.05-.445 4.384-1.261l-.001-.001c1.588-.989 2.284-1.564 1.68-2.769-.365-.684-1.349-1.256-2.659-.267 0 0-1.769 1.355-4.622 1.355-2.854 0-4.622-1.355-4.622-1.355-1.309-.994-2.297-.417-2.658.267z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        d="M11.999 12.142c3.478 0 6.318-2.718 6.318-6.064 0-3.36-2.84-6.078-6.318-6.078C8.52 0 5.68 2.718 5.68 6.078c0 3.346 2.84 6.064 6.319 6.064zm0-9.063c1.709 0 3.103 1.341 3.103 2.999 0 1.644-1.394 2.985-3.103 2.985S8.896 7.722 8.896 6.078c-.001-1.659 1.393-2.999 3.103-2.999z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="30"
+                    height="30"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L23.93 3.821l.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693L18.953 5.78c.595-.394 1.136-.176.691.218z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="35"
+                    height="35"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 310 310"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="hovered-paths"
+                  >
+                    <g>
+                      <path
+                        d="M297.917 64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359 0-61.369 5.776-72.517 19.938C0 79.663 0 100.008 0 128.166v53.669c0 54.551 12.896 82.248 83.386 82.248h143.226c34.216 0 53.176-4.788 65.442-16.527C304.633 235.518 310 215.863 310 181.835v-53.669c0-29.695-.841-50.16-12.083-63.521zm-98.896 97.765-65.038 33.991a9.997 9.997 0 0 1-14.632-8.863v-67.764a10 10 0 0 1 14.609-8.874l65.038 33.772a10 10 0 0 1 .023 17.738z"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class="hovered-path"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="35"
+                    height="35"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class="hovered-paths"
+                  >
+                    <g>
+                      <path
+                        d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class="hovered-path"
+                      ></path>
+                      <path
+                        d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class="hovered-path"
+                      ></path>
+                      <path
+                        d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0"
+                        fill="#ffffff"
+                        opacity="1"
+                        data-original="#000000"
+                        class="hovered-path"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="flex gap-4 w-fit items-center mt-5">
+              <div class="bg-white px-4 py-2 w-[150px] rounded-lg">
+                <img class="w-full h-full object-cover" src="https://polaris.ru/_nuxt/img/app-qr.96bf433.svg" alt="qrcode" />
+              </div>
+              <div class="text-white w-[150px]">
+                <p class="text-[12px]">Скачай мобильное приложение Polaris IQ Home</p>
+                <p class="text-[11px] mt-2 opacity-50">Наведите камеру телефона на QR‑код, чтобы скачать его прямо сейчас</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex footer_menu w-[70%] flex-wrap justify-between text-white">
+            <div>
+              <p class="text-[20px] font-[500]">Популярное</p>
+              <ul class="mt-5 text-[13px] flex flex-col gap-2">
+                <li><a href="">Кофемашины</a></li>
+                <li><a href="">Роботы-пылесосы</a></li>
+                <li><a href="">Вертикальные пылесосы</a></li>
+                <li><a href="">Зубные щетки и ирригаторы</a></li>
+                <li><a href="">Чайники</a></li>
+                <li><a href="">Увлажнители</a></li>
+                <li><a href="">Блендеры и миксеры</a></li>
+                <li><a href="">Посуда</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-[20px] font-[500]">О компании</p>
+              <ul class="mt-5 text-[13px] flex flex-col gap-2">
+                <li><a href="">О Polaris</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Статьи</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-[20px] font-[500]">Покупателям</p>
+              <ul class="mt-5 text-[13px] flex flex-col gap-2">
+                <li><a href="">Сервисные центры</a></li>
+                <li><a href="">Гарантийное обслуживание</a></li>
+                <li><a href="">Где купить</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="text-[20px] font-[500] flex flex-col gap-4">
+                <li><a href="">Polaris IQ Home</a></li>
+                <li><a href="">Интернет-магазин</a></li>
+                <li><a href="">Рецепты</a></li>
+                <li><a href="">Партнерам</a></li>
+              </ul>
+              <a href="/" class="text-[15px] border border-white rounded-[32px] mt-8 flex items-center justify-center py-3">Обратная связь</a>
+              <div class="mt-8">
+                <p class="text-[15px]">Телефон горячей линии</p>
+                <a class="text-[14px]" href="">8 800 700 11 78</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-white text-[13px] mt-12 mb-4">
+          © 2006-2025 «Polaris». Все права защищены. Использование материалов с сайта polaris.ru возможно только с разрешения администрации, с указанием активной ссылки на сайт.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
